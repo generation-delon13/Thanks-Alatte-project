@@ -1,5 +1,5 @@
 import csv
-        
+# creates new transaction csv with headers 
 def create_new_csv(input_file, output_file):
     try:
         with open(input_file, 'r') as file:
@@ -34,9 +34,8 @@ def create_new_csv(input_file, output_file):
         print(f"File not found: {input_file}")
     except Exception as e:
         print(f"An error occurred: {e}")
-
 create_new_csv('transactions.csv', 'new_transactions.csv')
-
+# removes sensitive data for csv file
 def remove_sensitive_data(input_file, output_file):
     try:
         with open(input_file, 'r') as file:
@@ -68,6 +67,4 @@ def remove_sensitive_data(input_file, output_file):
         print(f"File not found: {input_file}")
     except Exception as e:
         print(f"An error occurred: {e}")
-
-
 remove_sensitive_data('transactions.csv', 'new_transactions.csv')
