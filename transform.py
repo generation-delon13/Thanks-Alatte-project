@@ -43,7 +43,7 @@ def remove_sensitive_data(input_file, output_file):
             transaction_data = list(reader)
             
             # Header
-            header = ['Date & Time', 'Location', 'Products Purchased & Price', 'Payment Method']
+            header = ['Date & Time', 'Location', 'Products Purchased & Price', 'Total Price', 'Payment Method']
             
             
             with open(output_file, 'w', newline='') as new_file:
@@ -68,3 +68,4 @@ def remove_sensitive_data(input_file, output_file):
     except Exception as e:
         print(f"An error occurred: {e}")
 remove_sensitive_data('transactions.csv', 'new_transactions.csv')
+# splitting date and time column
