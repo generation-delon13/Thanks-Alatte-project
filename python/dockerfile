@@ -1,0 +1,10 @@
+#(image)
+FROM python 3.7
+
+#my SQL connector - RUN pip install mysql-connector-python
+
+#Directory
+WORKDIR /vs_code_directory/Projects/test_thanks_alatte
+
+#Put files with the container 
+COPY mysqlconnector.py ./
